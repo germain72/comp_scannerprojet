@@ -38,7 +38,7 @@ public class ServletData extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletData</title>");            
+            out.println("<title>Servlet ServletData</title><link href=\"css/cgestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ServletData at " + request.getContextPath() + "</h1>");
@@ -46,9 +46,9 @@ public class ServletData extends HttpServlet {
             {
             Client ins = (Client) sess.get(Client.class,new Integer(i));
             if(ins == null) break;
-            out.println("<hr/>Id : "+ins.getId()+"<br/>");
+            out.println("<hr/><div class='datarow'>Id : "+ins.getId()+"<br/>");
             out.println("Nom : "+ins.getNom()+"<br/>");
-            out.println("Prenom : "+ins.getPrenom()+"<br/><hr/>");
+            out.println("Prenom : "+ins.getPrenom()+"<br/><hr/></div>");
             }
       
             out.println("</body>");
