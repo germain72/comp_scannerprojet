@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 mars 2018 15:40:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ch.conceptforge.mavenprojecthibernatetuto.Commande" table="commande" catalog="bd_commande" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="nomcde" type="string">
+            <column name="NOMCDE" length="50" not-null="true" />
+        </property>
+        <property name="idclient" type="int">
+            <column name="idclient" not-null="true" />
+        </property>
+        <property name="datecde" type="date">
+            <column name="datecde" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
