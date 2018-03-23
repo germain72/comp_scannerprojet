@@ -4,9 +4,17 @@
         <servlet-name>ServletData</servlet-name>
         <servlet-class>ch.conceptforge.mavenprojecthibernatetuto.ServletData</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MaServletData</servlet-name>
+        <servlet-class>ch.conceptforge.mavenprojecthibernatetuto.MaServletData</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletData</servlet-name>
         <url-pattern>/ServletData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MaServletData</servlet-name>
+        <url-pattern>/MaServletData</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
