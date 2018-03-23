@@ -46,7 +46,6 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bd_commande?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <mapping resource="ch/conceptforge/mavenprojecthibernatetuto/Client.hbm.xml"/>
-    <mapping/>
     <mapping resource="ch/conceptforge/mavenprojecthibernatetuto/Commande.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

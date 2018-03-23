@@ -1,5 +1,5 @@
 package ch.conceptforge.mavenprojecthibernatetuto;
-// Generated 23 mars 2018 15:40:26 by Hibernate Tools 4.3.1
+// Generated 23 mars 2018 15:49:15 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,16 +11,16 @@ public class Commande  implements java.io.Serializable {
 
 
      private Integer id;
+     private Client client;
      private String nomcde;
-     private int idclient;
      private Date datecde;
 
     public Commande() {
     }
 
-    public Commande(String nomcde, int idclient, Date datecde) {
+    public Commande(Client client, String nomcde, Date datecde) {
+       this.client = client;
        this.nomcde = nomcde;
-       this.idclient = idclient;
        this.datecde = datecde;
     }
    
@@ -31,19 +31,19 @@ public class Commande  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+    public Client getClient() {
+        return this.client;
+    }
+    
+    public void setClient(Client client) {
+        this.client = client;
+    }
     public String getNomcde() {
         return this.nomcde;
     }
     
     public void setNomcde(String nomcde) {
         this.nomcde = nomcde;
-    }
-    public int getIdclient() {
-        return this.idclient;
-    }
-    
-    public void setIdclient(int idclient) {
-        this.idclient = idclient;
     }
     public Date getDatecde() {
         return this.datecde;
