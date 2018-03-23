@@ -50,7 +50,13 @@ public class ServletData extends HttpServlet {
             out.println("Nom : "+ins.getNom()+"<br/>");
             out.println("Prenom : "+ins.getPrenom()+"<br/><hr/></div>");
             }
-      
+            out.println("<hr/><br/>");
+            for(Client oc: GestionClient.getAllClient())
+            {
+                out.println("<hr/><div class='datarow'>Id : "+oc.getId()+"<br/>");
+                out.println("Nom : "+oc.getNom()+"<br/>");
+                out.println("Prenom : "+oc.getPrenom()+"<br/><hr/></div>");
+            }
             out.println("</body>");
             out.println("</html>");
         }
