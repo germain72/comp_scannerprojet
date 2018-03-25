@@ -11,6 +11,7 @@
        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Employee</title>
+        <link href="../css/cgestyle.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div id="add">

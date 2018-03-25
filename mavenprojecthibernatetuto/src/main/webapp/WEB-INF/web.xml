@@ -16,6 +16,14 @@
         <servlet-name>MaServletData</servlet-name>
         <url-pattern>/MaServletData</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>EmployeeController</servlet-name>
+        <servlet-class>ch.conceptforge.mavenprojecthibernatetuto.Controller.EmployeeController</servlet-class>
+    </servlet>   
+    <servlet-mapping>
+        <servlet-name>EmployeeController</servlet-name>
+        <url-pattern>/Employee</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
