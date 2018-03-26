@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javainfinite.DAO;
+package ch.conceptforge.mavenprojecthibernatetuto.employe.DAO;
 
 import java.util.List;
-import javainfinite.pojo.EmployeeDetails;
+import ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.DAOImpl.pojo.Employeedetails;
 
 
 
@@ -16,10 +16,10 @@ import javainfinite.pojo.EmployeeDetails;
  */
 public interface EmployeeDao {
     
-    public void saveEmployee (EmployeeDetails employee);
-    public List<EmployeeDetails> showAllEmployees();
+    public void saveEmployee (Employeedetails employee);
+    public List<Employeedetails> showAllEmployees();
     public void updateEmployee (int id, String ename, String enumber);
-    public void deleteEmployee (EmployeeDetails employee);
+    public void deleteEmployee (Employeedetails employee);
     
     
 }

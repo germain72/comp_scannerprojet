@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 23 mars 2018 15:49:15 by Hibernate Tools 4.3.1 -->
+<!-- Generated 26 mars 2018 07:36:44 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="ch.conceptforge.mavenprojecthibernatetuto.Commande" table="commande" catalog="bd_commande" optimistic-lock="version">
+    <class name="ch.conceptforge.mavenprojecthibernatetuto.Commande" table="commande" catalog="bd_commande">
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
-            <generator class="identity" />
+            <generator class="identity"></generator>
         </id>
         <many-to-one name="client" class="ch.conceptforge.mavenprojecthibernatetuto.Client" fetch="select">
             <column name="idclient" not-null="true" />

@@ -3,16 +3,15 @@
     Created on : 2 Oct, 2016, 12:39:19 PM
     Author     : Admin
 --%>
-
+<%@ page language="java" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" 
-           uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link href="../css/cgestyle.css" rel="stylesheet" type="text/css"/>
+        <link href="css/cgestyle.css" rel="stylesheet" type="text/css"/>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
 $(document).ready(function(){
@@ -39,7 +38,7 @@ $(document).ready(function(){
             -------------------------------------<br>
         </c:forEach>
         
-        <form action="EmployeeController" method="POST">
+        <form action="Employee" method="POST">
             Update: <input type="checkbox" id="update"> Delete: <input type="checkbox" id="delete" onclick="document.getElementById('ename').disabled=this.checked;document.getElementById('enumberupdate').disabled=this.checked;"><br><br>
             <select name="id">
                 <c:forEach items="${employeeList}" var="employee">

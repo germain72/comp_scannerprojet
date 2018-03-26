@@ -3,7 +3,7 @@
     Created on : 2 Oct, 2016, 12:29:19 PM
     Author     : Admin
 --%>
-
+<%@ page language="java" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,12 +11,12 @@
        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Employee</title>
-        <link href="../css/cgestyle.css" rel="stylesheet" type="text/css"/>
+        <link href="css/cgestyle.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div id="add">
         <h1> Add Employee </h1>
-        <form action="EmployeeController" method="GET">
+        <form action="Employee" method="GET">
             <table>
                 <tr>
                     <td> Employee Name: </td>
@@ -33,7 +33,7 @@
             </table>
         </form>
         </div>
-        <form action="EmployeeController" method="POST">
+        <form action="Employee" method="POST">
             <input type="submit" name="showEmployee" value="Show"> &nbsp; &nbsp;<br>
             
             

@@ -1,5 +1,5 @@
 package ch.conceptforge.mavenprojecthibernatetuto;
-// Generated 23 mars 2018 15:49:15 by Hibernate Tools 4.3.1
+// Generated 26 mars 2018 07:36:44 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;

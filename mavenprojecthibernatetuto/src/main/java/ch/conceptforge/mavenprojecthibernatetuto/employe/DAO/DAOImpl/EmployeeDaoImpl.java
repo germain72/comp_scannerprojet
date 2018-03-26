@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javainfinite.DAOImpl;
+package ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.DAOImpl;
 
 import java.util.ArrayList;
 import java.util.List;
-import javainfinite.DAO.EmployeeDao;
-import javainfinite.pojo.EmployeeDetails;
+import ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.EmployeeDao;
+import ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.DAOImpl.pojo.Employeedetails;
+import ch.conceptforge.mavenprojecthibernatetuto.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.Query;
@@ -20,8 +21,8 @@ import org.hibernate.Query;
 public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
-    public void saveEmployee(EmployeeDetails employee) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+    public void saveEmployee(Employeedetails employee) {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(employee);
         transaction.commit();
@@ -29,19 +30,20 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public List<EmployeeDetails> showAllEmployees() {
-        List<EmployeeDetails> employeeList = new ArrayList();
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Query query = session.createQuery("From EmployeeDetails");
+    public List<Employeedetails> showAllEmployees() {
+        List<Employeedetails> employeeList = new ArrayList<Employeedetails>();
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("from Employeedetails");
+        System.out.println("nb :"+query.list().size());
         employeeList = query.list();
         return employeeList;
     }
 
     @Override
     public void updateEmployee(int id, String ename, String enumber) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        EmployeeDetails empdetails = (EmployeeDetails)session.load(EmployeeDetails.class, id);
+        Employeedetails empdetails = (Employeedetails)session.load(Employeedetails.class, id);
         empdetails.setEname(ename);
         empdetails.setEnumber(enumber);
         session.update(empdetails);
@@ -50,8 +52,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public void deleteEmployee(EmployeeDetails employee) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+    public void deleteEmployee(Employeedetails employee) {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(employee);
         transaction.commit();

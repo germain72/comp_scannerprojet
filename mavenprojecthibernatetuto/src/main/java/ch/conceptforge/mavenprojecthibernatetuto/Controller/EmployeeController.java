@@ -5,9 +5,9 @@ package ch.conceptforge.mavenprojecthibernatetuto.Controller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javainfinite.DAO.EmployeeDao;
-import javainfinite.DAOImpl.EmployeeDaoImpl;
-import javainfinite.pojo.EmployeeDetails;
+import ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.EmployeeDao;
+import ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.DAOImpl.EmployeeDaoImpl;
+import ch.conceptforge.mavenprojecthibernatetuto.employe.DAO.DAOImpl.pojo.Employeedetails;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class EmployeeController extends HttpServlet {
 
-        EmployeeDetails employee = new EmployeeDetails();
+        Employeedetails employee = new Employeedetails();
         EmployeeDaoImpl employeeDaoImpl = new EmployeeDaoImpl();
         EmployeeDao edao;
        
@@ -40,8 +40,10 @@ public class EmployeeController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         System.out.println("???");
          if(request.getParameter("showEmployee")!=null){
-            List<EmployeeDetails> employeeList = new ArrayList();
+             System.out.println("ok");
+            List<Employeedetails> employeeList = new ArrayList();
             employeeList = employeeDaoImpl.showAllEmployees();
             request.setAttribute("employeeList", employeeList);
             RequestDispatcher rd = request.getRequestDispatcher("ShowAll.jsp");
