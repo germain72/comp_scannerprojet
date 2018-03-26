@@ -64,6 +64,8 @@ public class EmployeeController extends HttpServlet {
          if(request.getParameter("deleteEmployee")!=null){
              int id2 = Integer.parseInt(request.getParameter("id"));
              employee.setId(id2);
+             employee.setEname("");
+             employee.setEnumber("");
              employeeDaoImpl.deleteEmployee(employee);
               RequestDispatcher rd = request.getRequestDispatcher("EmployeeAdd.jsp");
             rd.forward(request, response);

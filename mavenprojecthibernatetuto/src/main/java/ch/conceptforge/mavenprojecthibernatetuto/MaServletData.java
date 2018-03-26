@@ -32,6 +32,7 @@ public class MaServletData extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            String hauteur = request.getParameter("hauteur");
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -39,6 +40,9 @@ public class MaServletData extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet MaServletData at " + request.getContextPath() + "</h1>");
+             out.println("<h1>valeur :"+hauteur+"</h1>");
+            
+            
             out.println("</body>");
             out.println("</html>");
         }
