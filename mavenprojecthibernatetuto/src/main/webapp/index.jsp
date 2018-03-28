@@ -13,7 +13,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Bienvenue dans ma page index.jsp</h1>
-         <a href="ServletData">Data</a>
+        <h1>Choix du Projet </h1><br/>
+        <p><a href="ServletData">Servlet Data</a></p>
+        <p><a href="clientjsp.jsp">Client JSP</a></p>
+        <p><a href="commandejsp.jsp">Commande JSP</a></p>
+        <p><a href="index.jsp">Data</a></p>
+        <hr/>
+         <p><a href="EmployeeAdd.jsp">Gérer des employés</a></p>
     </body>
 </html>

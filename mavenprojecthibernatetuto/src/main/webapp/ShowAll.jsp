@@ -60,5 +60,7 @@ $(document).ready(function(){
                
        
         </form>
+
+            <p>   <a href="EmployeeAdd.jsp">Retour</a></p>
     </body>
 </html>
