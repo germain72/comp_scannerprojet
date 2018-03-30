@@ -19,3 +19,8 @@ body {
     width: 300px;
     
 }
+
+.foot {
+    position : absolute;
+    bootom: 0;
+}

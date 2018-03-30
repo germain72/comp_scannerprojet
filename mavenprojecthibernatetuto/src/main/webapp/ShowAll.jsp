@@ -7,16 +7,8 @@
 <%@ page language="java" %>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+<%@include file="entete.jsp" %>
         <link href="css/cgestyle.css" rel="stylesheet" type="text/css"/>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
 $(document).ready(function(){
     $("#deleteEmployee").hide();
@@ -61,6 +53,5 @@ $(document).ready(function(){
        
         </form>
 
-            <p>   <a href="EmployeeAdd.jsp">Retour</a></p>
-    </body>
-</html>
+            <p>   <a href="EmployeeAdd.jsp">Retour Add</a></p>
+ <%@include file="pied.jsp" %>
