@@ -24,3 +24,11 @@ body {
     position : absolute;
     bootom: 0;
 }
+
+label{
+   display: block;
+    text-align: left;
+    width:125px;
+    text-transform: uppercase;
+    color:cadetblue;
+}

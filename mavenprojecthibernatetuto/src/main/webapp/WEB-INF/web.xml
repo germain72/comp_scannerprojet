@@ -13,7 +13,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletData</servlet-name>
-        <url-pattern>/Data</url-pattern>
+        <url-pattern>/ServletData</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MaServletData</servlet-name>

@@ -8,7 +8,7 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="entete.jsp" %>
-        <link href="css/cgestyle.css" rel="stylesheet" type="text/css"/>
+        
         <script>
 $(document).ready(function(){
     $("#deleteEmployee").hide();
